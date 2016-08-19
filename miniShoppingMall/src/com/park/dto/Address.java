@@ -10,20 +10,23 @@ public class Address {
 	public String getCity() {
 		return city;
 	}
-	public void setCity(String city) {
+	public Address setCity(String city) {
 		this.city = city;
+		return this;
 	}
 	public String getStreet() {
 		return street;
 	}
-	public void setStreet(String street) {
+	public Address setStreet(String street) {
 		this.street = street;
+		return this;
 	}
 	public String getZipcode() {
 		return zipcode;
 	}
-	public void setZipcode(String zipcode) {
+	public Address setZipcode(String zipcode) {
 		this.zipcode = zipcode;
+		return this;
 	}
 	
 	

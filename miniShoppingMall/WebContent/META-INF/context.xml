@@ -1,13 +1,12 @@
- <Context> 
-     <Resource name="jdbc/mySql" 
+<Context> 
+     <Resource name="jdbc/Mysql" 
          auth="Container"
          type="javax.sql.DataSource" 
          username="root" 
          password="java0000"
          driverClassName="com.mysql.jdbc.Driver"
          factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
-         url="jdbc:mysql://localhost:3306/mvcmini"
+         url="jdbc:mysql://localhost:3306/mvcmini?useUnicode=true&amp;characterEncoding=UTF-8"
          maxActive="500" 
          maxIdle="100"/>  
-         
  </Context>

@@ -33,6 +33,7 @@ public class MemberDao {
 	
 	//회원 가입 메서드(insert 처리)
 	public int memberInsert(Member member) throws SQLException {
+		connection = dataSource.getConnection();
 		int result = 0;
 		String name = member.getName();
 		String city = member.getAddress().getCity();
@@ -75,6 +76,7 @@ public class MemberDao {
 	
 	//member table 삭제 처리 메소드
 	public int memberDelete(String name) throws SQLException{
+		connection = dataSource.getConnection();
 		int result = 0;
 		// 삭제할 회원 이름 확인
 		System.out.println(name + "<- name memberDelete() MemberDao.java");
@@ -107,6 +109,7 @@ public class MemberDao {
 	
 	//회원 리스트를 가져오는 메서드
 	public ArrayList<Member> memberSelect(String search) throws SQLException{
+		connection = dataSource.getConnection();
 		ArrayList<Member> memberList = new ArrayList<Member>();
 		
 		String listSql = null;

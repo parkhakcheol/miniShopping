@@ -2,6 +2,6 @@
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-	response.sendRedirect(request.getContextPath()+"/board/BoardList.bo");
+	response.sendRedirect(request.getContextPath()+"/Mini/MemberInsertForm.do");
 	//response.sendRedirect(request.getContextPath() + "/board/BoardWrite.bo");
 %>
