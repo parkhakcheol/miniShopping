@@ -23,7 +23,7 @@ public class MemberDao {
 	public MemberDao(){
 		try{
 			Context init = new InitialContext();
-			System.out.println(init + "<-- init BoardDAO() ");
+			System.out.println(init + "<-- init MemberDao() ");
 			dataSource = (DataSource) init.lookup("java:comp/env/jdbc/Mysql");	
 		}catch(Exception ex){
 			System.out.println("DB 연결 실패 : " + ex);

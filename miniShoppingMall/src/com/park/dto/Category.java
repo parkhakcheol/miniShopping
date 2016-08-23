@@ -8,7 +8,7 @@ public class Category {
 	private int id;						//카테고리 아이디
 	private String name;				//카테고리 이름
 	private ArrayList<Item> items;		//카테고리 item 리스트
-	private Category parent;			//상위 카테고리
+	private int parent;			//상위 카테고리
 	private ArrayList<Category> child;	//하위 카테고리 리스트
 	
 	public int getId() {
@@ -29,10 +29,10 @@ public class Category {
 	public void setItems(ArrayList<Item> items) {
 		this.items = items;
 	}
-	public Category getParent() {
+	public int getParent() {
 		return parent;
 	}
-	public void setParent(Category parent) {
+	public void setParent(int parent) {
 		this.parent = parent;
 	}
 	public ArrayList<Category> getChild() {

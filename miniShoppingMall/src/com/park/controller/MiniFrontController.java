@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.park.action.Action;
 import com.park.action.ActionForward;
+import com.park.action.ItemInsertForm;
 import com.park.action.MemberInsertAction;
 
 
@@ -36,11 +37,20 @@ public class MiniFrontController extends HttpServlet {
     		System.out.println("가입화면으로 이동");
 			forward = new ActionForward();
 			forward.setRedirect(true);
-			forward.setPath(request.getContextPath() + "/minsert/m_insert_form.jsp");
+			forward.setPath(request.getContextPath() + "/insert/member_insert_form.jsp");
 			
     	} else if(command.equals("/Mini/MemberInsertAction.do")){
     		System.out.println("가입처리로 이동");
     		actionInterface = new MemberInsertAction();
+    		try {
+				forward = actionInterface.action(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	} else if(command.equals("/Mini/ItemInsertForm.do")){
+    		System.out.println("아이템 등록화면으로 이동");
+    		actionInterface = new ItemInsertForm();
     		try {
 				forward = actionInterface.action(request, response);
 			} catch (Exception e) {
@@ -52,8 +62,9 @@ public class MiniFrontController extends HttpServlet {
     	
     	if(forward != null){
 			if(forward.isRedirect()){
-				
-				response.sendRedirect(forward.getPath());
+				System.out.println(forward.getPath() + "<--- forward.getPath()[jsp 이동경로]  MiniFrontController.java");
+				System.out.println();
+				response.sendRedirect(forward.getPath());				
 			}else{
 				
 				RequestDispatcher dispatcher=
@@ -65,9 +76,7 @@ public class MiniFrontController extends HttpServlet {
 			}
 		}
     	
-    	
-    	
-    	
+
     }
 
 	

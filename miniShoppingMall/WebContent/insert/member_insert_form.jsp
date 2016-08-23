@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	/minsert/m_insert_form.jsp
-	<form action="<%=request.getContextPath()%>/Mini/MemberInsertAction.do"
-		method="post">
+	/insert/member_insert_form.jsp
+	<form action="${pageContext.request.contextPath}/Mini/MemberInsertAction.do" method="post">
 		<table border="1">
 			<!-- <tr>
 				<td>아이디</td>
@@ -19,19 +17,19 @@
 			<tr>
 				<td>이름</td>
 				<td><input type="text" name="name" size="20"></td>
-			<tr>
+			</tr>
 			<tr>
 				<td>시</td>
 				<td><input type="text" name="city" size="20"></td>
-			<tr>
+			</tr>
 			<tr>
 				<td>동</td>
 				<td><input type="text" name="street" size="20"></td>
-			<tr>
+			</tr>
 			<tr>
 				<td>우편번호</td>
 				<td><input type="text" name="zipcode" size="20"></td>
-			<tr>
+			</tr>
 			<tr>
 				<td colspan="4"><input type="submit" value="회원가입버튼"></td>
 			</tr>
